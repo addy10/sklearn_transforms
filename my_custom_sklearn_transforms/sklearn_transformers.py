@@ -26,6 +26,6 @@ class Standarized(BaseEstimator, TransformerMixin):
     def transform(self, X):
         # Primero copiamos el dataframe de datos de entrada 'X'
         data = X.copy()
-        sc = MinMaxScaler()
+        sc = StandardScaler()
         # Devolvemos un nuevo dataframe de datos sin las columnas no deseadas
         return sc.fit_transform(data)
