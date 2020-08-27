@@ -30,7 +30,7 @@ class UnderSampling(BaseEstimator, TransformerMixin):
         target = y.copy()
         under = RandomUnderSampler(sampling_strategy=0.5)
         # Devolvemos un nuevo dataframe de datos sin las columnas no deseadas
-        return sc.fit_transform(data,target)
+        return under.fit_transform(data,target)
     
 class OverSampling(BaseEstimator, TransformerMixin):
     def __init__(self):
@@ -44,4 +44,4 @@ class OverSampling(BaseEstimator, TransformerMixin):
         target = y.copy()
         over = RandomOverSampler(sampling_strategy=0.5)
         # Devolvemos un nuevo dataframe de datos sin las columnas no deseadas
-        return sc.fit_transform(data,target)
+        return over.fit_transform(data,target)
