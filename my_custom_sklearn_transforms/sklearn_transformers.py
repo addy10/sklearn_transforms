@@ -1,7 +1,4 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.preprocessing import StandardScaler
-from imblearn.under_sampling import RandomUnderSampler
-from imblearn.over_sampling import RandomOverSampler
 
 
 # All sklearn Transforms must have the `transform` and `fit` methods
