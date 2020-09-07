@@ -17,10 +17,10 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return data.drop(labels=self.columns, axis='columns')
 
 class UnderSampling(BaseEstimator, TransformerMixin):
-    def fit(self, X, y):
+    def fit(X, y):
         return self
 
-    def transform(self, X,y):
+    def transform(X,y):
         under= RandomUnderSampler(sampling_strategy=0.2)
         pipeline_input,pipeline_target=under.fit_sample(X,y)
         return (pipeline_input,pipeline_target)
