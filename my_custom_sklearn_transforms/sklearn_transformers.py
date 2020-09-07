@@ -17,8 +17,6 @@ class DropColumns(BaseEstimator, TransformerMixin):
         return data.drop(labels=self.columns, axis='columns')
 
 class UnderSampling(BaseEstimator, TransformerMixin):
-    def __init__(self):
-
     def fit(self, X, y):
         return self
 
