@@ -22,6 +22,6 @@ class UnderSampling(BaseEstimator, TransformerMixin):
 
     def transform(self, X,y):
         under= RandomUnderSampler(sampling_strategy=0.2)
-        pipeline_input,pipeline_target=under.fit_sample(pipeline_input,pipeline_target)
+        pipeline_input,pipeline_target=under.fit_sample(X,y)
         return pipeline_input,pipeline_target
 
