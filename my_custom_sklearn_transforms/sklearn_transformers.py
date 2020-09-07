@@ -24,6 +24,6 @@ class UnderSampling(BaseEstimator, TransformerMixin):
 
     def transform(self,X):
         under= RandomUnderSampler(sampling_strategy=0.2)
-        dataX = X.copy()
+        dataX = [X.columns]
         return under.fit_sample(dataX,self.target)
 
