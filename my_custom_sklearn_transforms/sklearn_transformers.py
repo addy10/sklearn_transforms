@@ -16,9 +16,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
 
-class underSampling(BaseEstimator, TransformerMixin):
-    def __init__(self, columns):
-        self.columns = columns
+class UnderSampling(BaseEstimator, TransformerMixin):
+    def __init__(self):
 
     def fit(self, X, y):
         return self
