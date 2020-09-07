@@ -19,7 +19,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
 class UnderSampling(BaseEstimator, TransformerMixin):
     def __init__(self, target):
         self.target = target
-    def fit(X, y=None):
+    def fit(self,X, y):
         return self
 
     def transform(self,X):
